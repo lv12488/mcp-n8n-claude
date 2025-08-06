@@ -4,9 +4,11 @@
   "description": "MCP (Model Context Protocol) server for managing n8n workflows through Claude AI and Cursor IDE",
   "scripts": {
     "clean": "rm -rf build || true",
-    "build": "npm run clean && tsc && chmod +x build/index.js",
+    "build": "npm run clean && tsc",
     "dev": "tsc -w",
-    "start": "node build/index.js",
+    "start": "node start.js",
+    "start:prod": "node build/index.js",
+    "debug": "node start.js",
     "prepublishOnly": "npm run build",
     "publish": "npm publish --access public",
     "npm-login": "npm login"
