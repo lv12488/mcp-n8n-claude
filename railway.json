@@ -3,7 +3,10 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "command": "npm run build"
+    "builder": "nixpacks",
+    "command": "npm ci && npm run build"
   },
-  "start": "node build/index.js"
+  "deploy": {
+    "startCommand": "node build/index.js"
+  }
 }
